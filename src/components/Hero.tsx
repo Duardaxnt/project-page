@@ -4,31 +4,10 @@ export default function Hero() {
     return (
         <header className="hero" id="home">
             <div className="content">
-                <h1>Olá!</h1>
-                <h1>Meu nome é <span className="destaque">Nathali</span></h1>
-                <p>Atuo como desenvolvedora full stack em formação 🚀</p>
+                <h2>Olá! Meu nome é </h2>
+                <h1> <span className="destaque">Eduarda de Andrade</span></h1>
+                <p>Atuo como <span className="typing">desenvolvedora full stack</span></p>
                 <a href="#sobre" className="btn">Sobre mim ⬇</a>
-
-                <div className="redes">
-                    <a href="https://www.linkedin.com/in/deveduardadeandrade/" target="_blank" rel="noreferrer">
-                        <img 
-                            src="/icones/linkedin.png" 
-                            alt="LinkedIn" 
-                            className="icone"
-                        />
-                    </a>
-                    <a href="https://github.com/Duardaxnt" target="_blank" rel="noreferrer">
-                        <img 
-                            src="/icones/github.png" 
-                            alt="GitHub" 
-                            className="icone"
-                        />
-                    </a>
-                </div>
-            </div>
-
-            <div className="avatar">
-                <img src="/imagens/fotoeu.jpg" alt="Nathali" />
             </div>
         </header>
     );
