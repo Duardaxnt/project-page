@@ -97,7 +97,7 @@ header {
 
 .hero {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
@@ -109,7 +109,7 @@ header {
     .hero .content {
       flex: 1;
       text-align: left;
-      margin-left: 160px;
+      margin-left: clamp(0px, 8vw, 160px);
     }
 
     .hero .content h1 {
@@ -182,6 +182,10 @@ header {
       .hero {
         flex-direction: column;
         text-align: center;
+      }
+
+      .hero .content {
+        margin-left: 0;
       }
     }
 
