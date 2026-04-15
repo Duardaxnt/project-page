@@ -12,9 +12,9 @@ const Projetos = () => {
         { nome: "CSS", porcentagem: 26.9, cor: "#A855F7" },
         { nome: "HTML", porcentagem: 0.3, cor: "#cc0606" },
         { nome: "Shell", porcentagem: 1.6, cor: "#34cc06" },
-        { nome: "Batchfile", porcentagem: 1.4, cor: "#45ac26" }
+        { nome: "Batchfile", porcentagem: 1.4, cor: "#45ac26" },
       ],
-      techs: ["React", "TypeScript"]
+      techs: ["React", "TypeScript"],
     },
     {
       id: 2,
@@ -24,9 +24,9 @@ const Projetos = () => {
       linguagens: [
         { nome: "HTML", porcentagem: 65.9, cor: "#cc0606" },
         { nome: "CSS", porcentagem: 32.2, cor: "#A855F7" },
-        {nome: "JavaScript", porcentagem: 1.9, cor: "#FACC15" },
+        { nome: "JavaScript", porcentagem: 1.9, cor: "#FACC15" },
       ],
-      techs: ["HTML", "CSS", "JavaScript"]
+      techs: ["HTML", "CSS", "JavaScript"],
     },
     {
       id: 3,
@@ -37,20 +37,17 @@ const Projetos = () => {
         { nome: "Typescript (TS + TSX)", porcentagem: 80.9, cor: "#3B82F6" },
         { nome: "(JSON + TOML)", porcentagem: 12.8, cor: "#64748B" },
         { nome: "SQL", porcentagem: 5.8, cor: "#ae4a4a" },
-        { nome: "CSS + HTML", porcentagem: 0.6, cor: "#ae4aae" }
-
+        { nome: "CSS + HTML", porcentagem: 0.6, cor: "#ae4aae" },
       ],
-      techs: ["React", "Typescript", "SQL"]
+      techs: ["React", "Typescript", "SQL"],
     },
     {
       id: 4,
       titulo: "Sistema de Gestão Educacional",
       desc: "Sistema de Gestão Educacional em Java, utilizando Programação Orientada a Objetos (POO) para gerenciamento de entidades acadêmicas como alunos, professores, cursos e turmas.",
       link: "https://github.com/Duardaxnt/SGE-EduConnect",
-      linguagens: [
-        { nome: "Java", porcentagem: 100.0, cor: "#f58e26" },
-      ],
-      techs: ["Java"]
+      linguagens: [{ nome: "Java", porcentagem: 100.0, cor: "#f58e26" }],
+      techs: ["Java"],
     },
     {
       id: 5,
@@ -67,9 +64,8 @@ const Projetos = () => {
         { nome: "HTML", porcentagem: 0.9, cor: "#cc0606" },
         { nome: "Other", porcentagem: 0.1, cor: "#ffffff" },
       ],
-      techs: ["Python", "Django", "Flutter", "Dart", "C++"]
+      techs: ["Python", "Django", "Flutter", "Dart", "C++"],
     },
-    
   ];
 
   return (
@@ -79,14 +75,12 @@ const Projetos = () => {
       <div className="cards">
         {projetos.map((p) => (
           <div key={p.id} className="card">
-
-            {/* HEADER */}
-          <div className="card-header">
+            <div className="card-header">
               <img src="/icones/github.png" alt="GitHub" className="icon" />
 
               <div className="icons-right">
                 <a href={p.link} target="_blank" rel="noopener noreferrer">
-                  <img src="/icones/link-externo.png" alt="Link" />
+                  <img src="/icones/link-externo.png" alt="Link externo" />
                 </a>
               </div>
             </div>
@@ -94,39 +88,32 @@ const Projetos = () => {
             <h3>{p.titulo}</h3>
             <p>{p.desc}</p>
 
-            {/* BARRA */}
             <div className="barra">
               {p.linguagens.map((l, i) => (
                 <div
                   key={i}
                   style={{
                     width: `${l.porcentagem}%`,
-                    background: l.cor
+                    background: l.cor,
                   }}
                 ></div>
               ))}
             </div>
 
-            {/* LEGENDA */}
             <div className="legenda">
               {p.linguagens.map((l, i) => (
                 <span key={i}>
-                  <span
-                    className="dot"
-                    style={{ background: l.cor }}
-                  ></span>
+                  <span className="dot" style={{ background: l.cor }}></span>
                   {l.nome} {l.porcentagem}%
                 </span>
               ))}
             </div>
 
-            {/* TAGS */}
             <div className="tags">
               {p.techs.map((t, i) => (
                 <span key={i}>{t}</span>
               ))}
             </div>
-
           </div>
         ))}
       </div>

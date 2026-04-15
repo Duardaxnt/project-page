@@ -2,11 +2,21 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #000000;
   color: #FAFAFA;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 h1, h2, h3 {
@@ -40,6 +50,8 @@ header {
       top: 0;
       z-index: 1000;
       font-family: 'Poppins', sans-serif;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -63,6 +75,10 @@ header {
       margin: 0;
     }
 
+    .nav-menu {
+      display: block;
+    }
+
     .nav-links a {
       text-decoration: none;
       color: #FAFAFA;
@@ -74,6 +90,25 @@ header {
 
     .nav-links a:hover {
       color: #A855F7;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      border-radius: 12px;
+      padding: 10px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #FAFAFA;
+      border-radius: 999px;
+      margin: 4px 0;
     }
 
 
@@ -95,7 +130,7 @@ header {
    HERO SECTION
 ========================= */
 
-.hero {
+    .hero {
       display: flex;
       min-height: 100vh;
       flex-wrap: wrap;
@@ -103,6 +138,7 @@ header {
       align-items: flex-start;
       background: url('https://img.freepik.com/fotos-premium/fumaca-roxa-contra-um-fundo-preto-com-uma-linha-roxa_1083272-4896.jpg');
       padding: 40px 10%;
+      text-align: left;
       }
 
 
@@ -113,11 +149,11 @@ header {
     }
 
     .hero .content h1 {
-      font-size: 3.5rem;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
     }
 
     .hero .content h2 {
-      font-size: 1.5rem;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
       color: #FAFAFA;
     }
 
@@ -127,7 +163,7 @@ header {
 
     .hero .content p {
       color: #FAFAFA;
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
       margin-top: 10px;
       position: relative;
     }
@@ -204,7 +240,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .sobre .descricao h1 {
@@ -225,6 +261,7 @@ header {
 .sobre .descricao {
   flex: 2;
   max-width: 1000px;
+  min-width: 280px;
 }
 
 .sobre .descricao p {
@@ -238,6 +275,7 @@ header {
   flex: 1;
   display: flex;
   justify-content: center;
+  min-width: 240px;
 }
 
 .sobre .foto img {
@@ -296,7 +334,7 @@ header {
 ================================ */
 
 #experiencia {
-  padding: 150px 20px;
+  padding: 120px 20px;
 }
 
 .experience-container {
@@ -483,6 +521,7 @@ header {
 
 .card {
   width: 320px;
+  max-width: 100%;
   background: #000000;
   border-radius: 16px;
   padding: 20px;
@@ -621,4 +660,210 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .hero {
+    padding: 36px 6%;
+  }
+
+  .hero .content {
+    margin-left: 0;
+  }
+
+  .sobre .container {
+    gap: 28px;
+  }
+
+  .timeline-item.left {
+    padding-right: 220px;
+  }
+
+  .timeline-item.right {
+    padding-left: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0 4px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 20px 64px;
+  }
+
+  .hero .content {
+    width: 100%;
+  }
+
+  .hero .content h1 {
+    line-height: 1.1;
+  }
+
+  .hero .content p {
+    position: static;
+  }
+
+  .hero .content .typing {
+    position: static;
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  .sobre {
+    padding: 32px 16px;
+  }
+
+  .sobre .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre .descricao p {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .sobre .foto img {
+    width: min(220px, 70vw);
+    margin-top: 8px;
+  }
+
+  #experiencia {
+    padding: 96px 16px;
+  }
+
+  .experience-title,
+  .portfolio-title,
+  .contato-title {
+    font-size: 28px;
+  }
+
+  .timeline-line {
+    left: 18px;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    padding: 0 0 0 46px;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 18px;
+  }
+
+  .timeline-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .portfolio-section {
+    padding: 48px 16px;
+  }
+
+  .cards {
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  #contato {
+    padding: 64px 16px;
+  }
+
+  .contato-texto {
+    font-size: 16px;
+  }
+
+  .contato-icons {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .hero .content h1 {
+    font-size: 2rem;
+  }
+
+  .hero .content h2 {
+    font-size: 1rem;
+  }
+
+  .hero .btn,
+  .btn-curriculo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sobre .descricao h1 {
+    font-size: 24px;
+  }
+
+  .experience-title,
+  .portfolio-title,
+  .contato-title {
+    font-size: 24px;
+  }
+
+  .timeline-company {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
 }
