@@ -137,6 +137,8 @@ header {
       justify-content: space-between;
       align-items: flex-start;
       background: url('https://img.freepik.com/fotos-premium/fumaca-roxa-contra-um-fundo-preto-com-uma-linha-roxa_1083272-4896.jpg');
+      background-repeat: no-repeat;
+      background-position: center 115%;
       padding: 40px 10%;
       text-align: left;
       }
@@ -149,11 +151,11 @@ header {
     }
 
     .hero .content h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-size: clamp(2.4rem, 5.4vw, 3.8rem);
     }
 
     .hero .content h2 {
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-size: clamp(1.2rem, 2.7vw, 1.65rem);
       color: #FAFAFA;
     }
 
@@ -163,7 +165,7 @@ header {
 
     .hero .content p {
       color: #FAFAFA;
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(1.05rem, 2.1vw, 1.3rem);
       margin-top: 10px;
       position: relative;
     }
@@ -753,14 +755,18 @@ footer {
     font-size: 15px;
   }
 
-  .hero {
-    min-height: 100svh;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 28px 20px;
-  }
+    .hero {
+      min-height: 100svh;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px;
+      background-size: 92% auto;
+      background-position: center 112%;
+      background-repeat: no-repeat;
+      background-color: #000000;
+    }
 
   .hero .content {
     width: 100%;
@@ -870,11 +876,11 @@ footer {
   }
 
   .hero .content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero .content h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .hero .btn,
