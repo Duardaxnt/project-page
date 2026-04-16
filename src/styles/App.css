@@ -338,8 +338,9 @@ header {
 }
 
 .experience-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .experience-title {
@@ -365,6 +366,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 60px;
+  align-items: stretch;
 }
 
 .timeline-line {
@@ -390,6 +392,7 @@ header {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.7s ease;
+  box-sizing: border-box;
 }
 
 .timeline-item.show {
@@ -402,7 +405,7 @@ header {
 .timeline-item.left {
   align-self: flex-start;
   text-align: left;
-  padding-right: 450px;
+  padding-right: 40px;
 }
 
 /* Right */
@@ -410,7 +413,7 @@ header {
 .timeline-item.right {
   align-self: flex-end;
   text-align: left;
-  padding-left: 450px;
+  padding-left: 40px;
 }
 
 /* Dot */
@@ -428,6 +431,17 @@ header {
   box-shadow: 0 0 10px rgba(139,92,246,0.5);
 }
 
+.timeline-item.left .timeline-dot {
+  left: auto;
+  right: 0px;
+  transform: translateX(50%);
+}
+
+.timeline-item.right .timeline-dot {
+  left: 0px;
+  transform: translateX(-50%);
+}
+
 /* Card */
 
 .timeline-card {
@@ -436,9 +450,9 @@ header {
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   transition: 0.3s;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 0;
   border: 2px solid #A855F7;
+  width: 100%;
 }
 
 .timeline-card:hover {
@@ -487,6 +501,15 @@ header {
 
   .timeline-dot {
     left: 20px;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 20px;
+    right: auto;
+    transform: translateX(-50%);
   }
 }
 
@@ -513,15 +536,15 @@ header {
 }
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .card {
-  width: 320px;
-  max-width: 100%;
+  width: 100%;
   background: #000000;
   border-radius: 16px;
   padding: 20px;
@@ -684,11 +707,15 @@ footer {
   }
 
   .timeline-item.left {
-    padding-right: 220px;
+    padding-right: 28px;
   }
 
   .timeline-item.right {
-    padding-left: 220px;
+    padding-left: 28px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -803,10 +830,6 @@ footer {
     padding: 48px 16px;
   }
 
-  .cards {
-    gap: 16px;
-  }
-
   .card {
     width: 100%;
   }
@@ -865,5 +888,10 @@ footer {
 
   .card {
     padding: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
