@@ -92,24 +92,24 @@ header {
       color: #A855F7;
     }
 
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid rgba(168, 85, 247, 0.35);
-      border-radius: 12px;
-      padding: 10px;
-      cursor: pointer;
-      margin-left: auto;
-    }
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #A855F7;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: auto;
+}
 
-    .menu-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #FAFAFA;
-      border-radius: 999px;
-      margin: 4px 0;
-    }
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #A855F7;
+  border-radius: 999px;
+  margin: 4px 0;
+}
 
 
     /* =========================
@@ -695,7 +695,10 @@ footer {
   }
 
   .hero {
+    min-height: 100svh;
     padding: 36px 6%;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero .content {
@@ -751,14 +754,17 @@ footer {
   }
 
   .hero {
-    min-height: auto;
+    min-height: 100svh;
     flex-direction: column;
     text-align: center;
-    padding: 32px 20px 64px;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 20px;
   }
 
   .hero .content {
     width: 100%;
+    margin-left: 0;
   }
 
   .hero .content h1 {
@@ -766,13 +772,18 @@ footer {
   }
 
   .hero .content p {
-    position: static;
+    position: relative;
   }
 
   .hero .content .typing {
-    position: static;
     display: inline-block;
-    margin-left: 0;
+    overflow: hidden;
+    position: absolute;
+    margin-left: 0.25em;
+    white-space: nowrap;
+    border-right: 2px solid #A855F7;
+    animation: typing 6s steps(23) 5s infinite alternate,
+              blink 5s step-end infinite;
   }
 
   .sobre {
