@@ -66,6 +66,18 @@ const Projetos = () => {
       ],
       techs: ["Python", "Django", "Flutter", "Dart", "C++"],
     },
+     {
+      id: 5,
+      titulo: "DentFlow",
+      desc: "Sistema de gestão para consultório odontológico com múltiplos profissionais, controle de agenda por especialidade e gestão financeira integrada.",
+      link: "https://github.com/Duardaxnt/DentFlow",
+      linguagens: [
+        { nome: "Typescript", porcentagem: 95.8, cor: "#3B82F6" },
+        { nome: "CSS", porcentagem: 3.8, cor: "#A855F7" },
+        { nome: "JavaScript", porcentagem: 0.4, cor: "#FACC15" }
+      ],
+      techs: ["Typescript", "CSS", "JavaScript"],
+    },
   ];
 
   return (
