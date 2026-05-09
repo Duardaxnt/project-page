@@ -24,7 +24,7 @@ export default function About() {
           </p>
 
           <a
-            href="/Curriculo_Nathali_Eduarda_de_Andrade.pdf"
+            href="/CV_NATHALI_EDUARDA_DE_ANDRADE.pdf"
             download
             className="btn-curriculo"
           >
