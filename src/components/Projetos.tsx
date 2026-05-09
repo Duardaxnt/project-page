@@ -129,6 +129,15 @@ const Projetos = () => {
           </div>
         ))}
       </div>
+
+      <a
+        href="https://github.com/Duardaxnt"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn"
+      >
+        Ver GitHub
+      </a>
     </section>
   );
 };

@@ -192,7 +192,8 @@ header {
       50% { border-color: #A855F7; }
     }
 
-    .hero .btn {
+    .btn,
+    .btn-curriculo {
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
@@ -201,15 +202,13 @@ header {
       border: 2px solid #A855F7;
       border-radius: 15px;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+      transition: transform 0.3s ease;
     }
 
-      .hero .btn:hover {
+      .btn:hover,
+      .btn-curriculo:hover {
         transform: scale(1.05);
-      }
-
-      .hero .btn {
-        box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
       }
 
     /* =========================
@@ -285,9 +284,26 @@ header {
   height: auto;
   border-radius: 20px; 
   object-fit: cover;
-
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
   border: 3px solid #A855F7;
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.45),
+    0 0 26px rgba(168, 85, 247, 0.28);
+  animation: brilhoFoto 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes brilhoFoto {
+  from {
+    border-color: #A855F7;
+    box-shadow:
+      0 0 10px rgba(168, 85, 247, 0.35),
+      0 0 20px rgba(168, 85, 247, 0.2);
+  }
+  to {
+    border-color: #d8b4fe;
+    box-shadow:
+      0 0 18px rgba(168, 85, 247, 0.75),
+      0 0 36px rgba(168, 85, 247, 0.45);
+  }
 }
 
 
@@ -295,25 +311,8 @@ header {
    BOTÃO CURRÍCULO
 ========================= */
 
-.btn-curriculo {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #2d1146;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  border: 2px solid #A855F7;
-  margin-top: 15px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
 .btn-curriculo i {
   margin-left: 8px;
-}
-
-.btn-curriculo:hover {
-  background-color: #49196f;
 }
 
 /* Responsivo */
@@ -523,6 +522,7 @@ header {
 .portfolio-section {
   background: #000000;
   padding: 60px 20px;
+  text-align: center;
 }
 
 .portfolio-title {
@@ -543,6 +543,10 @@ header {
   gap: 20px;
   max-width: 1180px;
   margin: 0 auto;
+}
+
+.portfolio-section .btn {
+  margin-top: 32px;
 }
 
 .card {
@@ -883,7 +887,7 @@ footer {
     font-size: 1.1rem;
   }
 
-  .hero .btn,
+  .btn,
   .btn-curriculo {
     width: 100%;
     text-align: center;
