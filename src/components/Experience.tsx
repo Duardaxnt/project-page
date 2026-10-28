@@ -18,7 +18,7 @@ const experiences: ExperienceItem[] = [
   {
     company: "iBico Brasil",
     role: "Engenheira de Software",
-    period: "Novembro 2025 – Atual",
+    period: "Novembro 2025 – Outubro 2026",
     side: "right",
   },
 ];
